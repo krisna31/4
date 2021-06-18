@@ -125,6 +125,25 @@ h1{
     animation: kebawah .5s .5s forwards ;
 }
 
+.overlay:target .next,
+.overlay:target .prev {
+    position: absolute;
+    top :50%;
+    z-index: 9999;
+    animation: fade .5s .5s forwards ;
+    opacity: 0;
+}
+
+.overlay .next {
+    right: 26%;
+}
+
+.overlay .prev {
+    left: 26%;
+}
+
+/*animasi*/
+
 @keyframes first {
     0% {
         transform: scale(0) rotate(0);
@@ -144,5 +163,16 @@ h1{
     100% {
         opacity: 1;
         margin-top: 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
